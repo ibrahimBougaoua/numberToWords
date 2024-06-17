@@ -35,9 +35,9 @@ class NumberToWordsColumn extends TextColumn
      * @param string $lang
      * @return static
      */
-    public function lang(string $lang): static
+    public function lang(string $lang = null): static
     {
-        $this->lang = $lang;
+        $this->lang = $lang ?? config('numbertowords.lang');
 
         return $this;
     }
