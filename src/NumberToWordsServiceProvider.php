@@ -2,9 +2,9 @@
 
 namespace NumberToWord\NumberToWords;
 
+use NumberToWord\NumberToWords\Commands\NumberToWordsCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use NumberToWord\NumberToWords\Commands\NumberToWordsCommand;
 
 class NumberToWordsServiceProvider extends PackageServiceProvider
 {
