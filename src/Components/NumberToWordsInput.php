@@ -13,9 +13,6 @@ class NumberToWordsInput extends TextInput
 
     /**
      * Create a new component instance.
-     *
-     * @param string $name
-     * @return static
      */
     public static function make(string $name): static
     {
@@ -32,9 +29,6 @@ class NumberToWordsInput extends TextInput
 
     /**
      * Set the language for number to words conversion.
-     *
-     * @param string $lang
-     * @return static
      */
     public function lang(string $lang): static
     {

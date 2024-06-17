@@ -1,4 +1,5 @@
 <?php
+
 namespace NumberToWord\NumberToWords\Components;
 
 use Filament\Infolists\Components\Component;
@@ -8,8 +9,8 @@ use NumberToWord\NumberToWords\Traits\FilamentNumberToWords;
 
 class NumberToWordsTextEntry extends Component
 {
-    use FilamentNumberToWords;    
     use Concerns\HasExtraAlpineAttributes;
+    use FilamentNumberToWords;
     use HasHeading;
 
     protected string $view = 'numbertowords::components.infolists.entries.number-to-words-text-entry';

@@ -13,9 +13,6 @@ class NumberToWordsColumn extends TextColumn
 
     /**
      * Create a new column instance.
-     *
-     * @param string $name
-     * @return static
      */
     public static function make(string $name): static
     {
@@ -31,11 +28,8 @@ class NumberToWordsColumn extends TextColumn
 
     /**
      * Set the language for number to words conversion.
-     *
-     * @param string $lang
-     * @return static
      */
-    public function lang(string $lang = null): static
+    public function lang(?string $lang = null): static
     {
         $this->lang = $lang ?? config('numbertowords.lang');
 
