@@ -10,7 +10,7 @@ The words-to-number and number-to-words conversion functionality enables users t
 <br />
 <a href="https://www.youtube.com/@IbrahimBougaoua" target="_blank">Youtube Video</a>
 <br /><br />
-[<img src="https://raw.githubusercontent.com/ibrahimBougaoua/screenshot/main/wordsToNumbers.jpg" width="100%" class="filament-hidden">](https://www.youtube.com/@IbrahimBougaoua)
+<img src="https://raw.githubusercontent.com/ibrahimBougaoua/screenshot/main/wordsToNumbers.jpg" width="100%" class="filament-hidden">
 
 ## Installation
 
@@ -113,6 +113,7 @@ echo $numbers; // Outputs: 12000
 $words = FilamentWordsToNumbers::numbersToWords(12000, 'en');
 echo $words; // Outputs: Twelve Thousand
 
+// with form.
 return $form
     ->schema([
         Section::make()
@@ -124,6 +125,7 @@ return $form
 					->label('Words To Numbers')
 					->lang('en'),
 
+// with table.
 return $table
      ->columns([
 		NumbersToWordsColumn::make('price')
