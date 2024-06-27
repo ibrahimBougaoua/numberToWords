@@ -10,7 +10,7 @@ The words-to-number and number-to-words conversion functionality enables users t
 <br />
 <a href="https://www.youtube.com/@IbrahimBougaoua" target="_blank">Youtube Video</a>
 <br /><br />
-<img src="https://raw.githubusercontent.com/ibrahimBougaoua/screenshot/main/wordsToNumbers.jpg" width="100%" class="filament-hidden">
+<img src="https://raw.githubusercontent.com/ibrahimBougaoua/screenshot/main/ibrahim-bougaoua-words-to-numbers.png" width="100%" class="filament-hidden" />
 
 ## Installation
 
@@ -109,22 +109,28 @@ return [
 ```php
 $numbers = FilamentNumbersToWords::wordsToNumbers('Twelve Thousand', 'en');
 echo $numbers; // Outputs: 12000
+```
 
+```php
 $words = FilamentWordsToNumbers::numbersToWords(12000, 'en');
 echo $words; // Outputs: Twelve Thousand
+```
 
+```php
 // with form.
 return $form
     ->schema([
         Section::make()
             ->schema([
                 NumbersToWordsInput::make('price')
-					->label('Numbers To Words')
-					->lang('en'),
+                    ->label('Numbers To Words')
+                    ->lang('en'),
                 WordsToNumbersInput::make('word')
-					->label('Words To Numbers')
-					->lang('en'),
+                    ->label('Words To Numbers')
+                    ->lang('en'),
+```
 
+```php
 // with table.
 return $table
      ->columns([
@@ -134,7 +140,7 @@ return $table
 			->suffix(' DA')
 			->badge()
 			->color('success'),
-        WordsToNumbersColumn::make('word')
+                WordsToNumbersColumn::make('word')
 			->label("Words To Numbers")
 			->lang('en')
 			->suffix(' DA')
