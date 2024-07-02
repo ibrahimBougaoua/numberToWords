@@ -107,13 +107,17 @@ return [
 ## Usage
 
 ```php
-$numbers = NumbersToWords::wordsToNumbers('Twelve Thousand', 'en');
-echo $numbers; // Outputs: 12000
+use NumberToWord\NumberToWords\Traits\NumbersToWords;
+
+$words = NumbersToWords::numbersToWords(12000, 'en');
+echo $words; // Outputs: Twelve Thousand
 ```
 
 ```php
-$words = WordsToNumbers::numbersToWords(12000, 'en');
-echo $words; // Outputs: Twelve Thousand
+use NumberToWord\NumberToWords\Traits\WordsToNumbers;
+
+$numbers = WordsToNumbers::wordsToNumbers('Twelve Thousand', 'en');
+echo $numbers; // Outputs: 12000
 ```
 ## It's support filament,you can use it with filament as you see below.
 
