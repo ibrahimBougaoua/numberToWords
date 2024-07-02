@@ -3,11 +3,11 @@
 namespace NumberToWord\NumberToWords\Columns;
 
 use Filament\Tables\Columns\TextColumn;
-use NumberToWord\NumberToWords\Traits\FilamentNumbersToWords;
+use NumberToWord\NumberToWords\Traits\NumbersToWords;
 
 class NumbersToWordsColumn extends TextColumn
 {
-    use FilamentNumbersToWords;
+    use NumbersToWords;
 
     protected string $lang = 'en';
 

@@ -1,7 +1,7 @@
 <?php
 namespace NumberToWord\NumberToWords\Traits;
 
-trait FilamentWordsToNumbers
+trait WordsToNumbers
 {
     public static function wordsToNumbers(string $words, string $lang = 'en')
     {

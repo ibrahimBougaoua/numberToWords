@@ -2,9 +2,9 @@
 
 namespace NumberToWord\NumberToWords\Helpers;
 
-use NumberToWord\NumberToWords\Traits\FilamentNumberToWords;
+use NumberToWord\NumberToWords\Traits\NumberToWords;
 
 class NumberToWordsHelper
 {
-    use FilamentNumberToWords;
+    use NumberToWords;
 }

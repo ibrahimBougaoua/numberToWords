@@ -2,11 +2,11 @@
 namespace NumberToWord\NumberToWords\Actions;
 
 use Filament\Forms\Components\TextInput;
-use NumberToWord\NumberToWords\Traits\FilamentNumbersToWords;
+use NumberToWord\NumberToWords\Traits\NumbersToWords;
 
 class NumbersToWordsInput extends TextInput
 {
-    use FilamentNumbersToWords;
+    use NumbersToWords;
 
     protected string $lang = 'en';
     

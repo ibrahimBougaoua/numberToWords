@@ -2,7 +2,7 @@
 
 namespace NumberToWord\NumberToWords\Traits;
 
-trait FilamentNumberToWords
+trait NumberToWords
 {
     // English words
     protected static $units_en = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
