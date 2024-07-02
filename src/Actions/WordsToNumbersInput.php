@@ -1,4 +1,5 @@
 <?php
+
 namespace NumberToWord\NumberToWords\Actions;
 
 use Filament\Forms\Components\TextInput;
@@ -23,7 +24,7 @@ class WordsToNumbersInput extends TextInput
         return $input;
     }
 
-    public function lang(string $lang = null): static
+    public function lang(?string $lang = null): static
     {
         $this->lang = $lang ?? config('numbertowords.lang');
 

@@ -22,7 +22,7 @@ class WordsToNumbersColumn extends TextColumn
         return $column;
     }
 
-    public function lang(string $lang = null): static
+    public function lang(?string $lang = null): static
     {
         $this->lang = $lang ?? config('numbertowords.lang');
 

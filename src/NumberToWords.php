@@ -2,6 +2,4 @@
 
 namespace NumberToWord\NumberToWords;
 
-class NumberToWords
-{
-}
+class NumberToWords {}

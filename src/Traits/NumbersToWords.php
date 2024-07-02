@@ -1,11 +1,12 @@
 <?php
+
 namespace NumberToWord\NumberToWords\Traits;
 
 trait NumbersToWords
 {
     public static function numbersToWords($number, $lang = 'en'): string
     {
-        if (!is_numeric($number)) {
+        if (! is_numeric($number)) {
             return 'Invalid number';
         }
 
@@ -23,12 +24,12 @@ trait NumbersToWords
 
         if ($fractionalPart > 0) {
             $fractionWords = static::convertFractionalPart($fractionalPart, $lang);
-            $words .= config("numbertowords.words.and_{$lang}", ' and ') . $fractionWords;
+            $words .= config("numbertowords.words.and_{$lang}", ' and ').$fractionWords;
         }
 
         $negativeWord = config("numbertowords.words.negative_{$lang}", 'Negative ');
 
-        return $isNegative ? $negativeWord . $words : $words;
+        return $isNegative ? $negativeWord.$words : $words;
     }
 
     protected static function convertIntegerPart($number, $lang): string
@@ -39,7 +40,7 @@ trait NumbersToWords
         while ($number > 0) {
             $remainder = $number % 1000;
             if ($remainder > 0) {
-                $words = static::convertThreeDigitNumber($remainder, $lang) . ' ' . static::getThousands($lang)[$index] . ' ' . $words;
+                $words = static::convertThreeDigitNumber($remainder, $lang).' '.static::getThousands($lang)[$index].' '.$words;
             }
             $number = floor($number / 1000);
             $index++;
@@ -51,7 +52,8 @@ trait NumbersToWords
     protected static function convertFractionalPart($fraction, $lang): string
     {
         $fractionDigits = substr(strrchr($fraction, '.'), 1);
-        return static::convertIntegerPart($fractionDigits, $lang) . config("numbertowords.words.cents_{$lang}", ' Cents');
+
+        return static::convertIntegerPart($fractionDigits, $lang).config("numbertowords.words.cents_{$lang}", ' Cents');
     }
 
     protected static function convertThreeDigitNumber($number, $lang): string
@@ -61,7 +63,7 @@ trait NumbersToWords
         $words = '';
 
         if ($hundreds > 0) {
-            $words .= static::getUnits($lang)[$hundreds] . config("numbertowords.words.hundred_{$lang}", ' Hundred ');
+            $words .= static::getUnits($lang)[$hundreds].config("numbertowords.words.hundred_{$lang}", ' Hundred ');
         }
 
         if ($remainder > 0) {
@@ -74,7 +76,7 @@ trait NumbersToWords
                 $units = $remainder % 10;
                 $words .= static::getTens($lang)[$tens];
                 if ($units > 0) {
-                    $words .= config("numbertowords.words.and_{$lang}", '-') . static::getUnits($lang)[$units];
+                    $words .= config("numbertowords.words.and_{$lang}", '-').static::getUnits($lang)[$units];
                 }
             }
         }
@@ -84,21 +86,21 @@ trait NumbersToWords
 
     protected static function getUnits($lang)
     {
-        return config('numbertowords.words.units_' . $lang);
+        return config('numbertowords.words.units_'.$lang);
     }
 
     protected static function getTeens($lang)
     {
-        return config('numbertowords.words.teens_' . $lang);
+        return config('numbertowords.words.teens_'.$lang);
     }
 
     protected static function getTens($lang)
     {
-        return config('numbertowords.words.tens_' . $lang);
+        return config('numbertowords.words.tens_'.$lang);
     }
 
     protected static function getThousands($lang)
     {
-        return config('numbertowords.words.thousands_' . $lang);
+        return config('numbertowords.words.thousands_'.$lang);
     }
 }

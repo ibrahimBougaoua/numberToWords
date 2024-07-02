@@ -1,10 +1,11 @@
 <?php
+
 // config for NumberToWord/NumberToWords
 return [
     'lang' => 'en',
 
     'words' => [
-        
+
         // Arabic words
         'units_ar' => ['', 'واحد', 'اثنان', 'ثلاثة', 'أربعة', 'خمسة', 'ستة', 'سبعة', 'ثمانية', 'تسعة'],
         'teens_ar' => ['عشرة', 'أحد عشر', 'اثنا عشر', 'ثلاثة عشر', 'أربعة عشر', 'خمسة عشر', 'ستة عشر', 'سبعة عشر', 'ثمانية عشر', 'تسعة عشر'],
@@ -70,5 +71,5 @@ return [
         'hundred_it' => ' Cento ',
         'and_it' => ' e ',
         'cents_it' => ' Centesimi',
-    ]
+    ],
 ];

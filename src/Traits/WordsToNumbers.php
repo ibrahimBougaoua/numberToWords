@@ -1,4 +1,5 @@
 <?php
+
 namespace NumberToWord\NumberToWords\Traits;
 
 trait WordsToNumbers
