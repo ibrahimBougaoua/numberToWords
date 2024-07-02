@@ -107,12 +107,12 @@ return [
 ## Usage
 
 ```php
-$numbers = FilamentNumbersToWords::wordsToNumbers('Twelve Thousand', 'en');
+$numbers = NumbersToWords::wordsToNumbers('Twelve Thousand', 'en');
 echo $numbers; // Outputs: 12000
 ```
 
 ```php
-$words = FilamentWordsToNumbers::numbersToWords(12000, 'en');
+$words = WordsToNumbers::numbersToWords(12000, 'en');
 echo $words; // Outputs: Twelve Thousand
 ```
 ## It's support filament,you can use it with filament as you see below.
